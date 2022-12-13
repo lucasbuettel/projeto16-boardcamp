@@ -5,7 +5,7 @@ export async function getGames(req,res) {
   try {
     const games = await connection.query(`
     SELECT 
-      games.*, categories.name AS categoryName 
+      games.*, categories.name AS "categoryName" 
     FROM 
       games 
     JOIN 
